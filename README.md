@@ -1,2 +1,2 @@
-# fetchfrontendproject
-Frond End Engineer Role at Fetch Project 
+# fetch front end project
+Frond End Engineer Role Take Home Excercise at Fetch  
