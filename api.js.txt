@@ -1,0 +1,29 @@
+import axios from "axios";
+
+const API_BASE_URL = "https://frontend-take-home-service.fetch.com";
+
+export const login = async (name, email) => {
+  await axios.post(`${API_BASE_URL}/auth/login`, { name, email }, { withCredentials: true });
+};
+
+export const getBreeds = async () => {
+  const response = await axios.get(`${API_BASE_URL}/dogs/breeds`, { withCredentials: true });
+  return response.data;
+};
+
+export const searchDogs = async (params) => {
+  const response = await axios.get(`${API_BASE_URL}/dogs/search`, {
+    withCredentials: true,
+    params,
+  });
+  return response.data;
+};
+
+export const getDogsByIds = async (ids) => {
+  const response = await axios.post(
+    `${API_BASE_URL}/dogs`,
+    ids,
+    { withCredentials: true }
+  );
+  return response.data;
+};
